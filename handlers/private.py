@@ -7,7 +7,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 
-@Client.on_message(command("start") & filters.private & ~filters.group & ~filters.edited)
+@Client.on_message(command("start") & filters.private & ~filters.group)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/f6f020ef5aeeb079b15b9.jpg",
@@ -41,7 +41,7 @@ async def start_(client: Client, message: Message):
     )
     
 
-@Client.on_message(command(["repo"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["repo"]) & filters.group)
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/f6f020ef5aeeb079b15b9.jpg",
