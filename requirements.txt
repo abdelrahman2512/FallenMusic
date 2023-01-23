@@ -1,4 +1,4 @@
-git+https://github.com/ophexor/yt-dl@master
+yt_dlp
 pyrogram
 TgCrypto
 py-tgcalls==0.8.1rc1
